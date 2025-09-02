@@ -1,22 +1,21 @@
 name: demo
+
 on:
-  push: 
+  push:
     branches:
       - main
+
 jobs:
-  builds:
+  build:   # singular "build" is more common, but "builds" also works
     runs-on: ubuntu-latest
-    env: 
+    env:
       DEV_ENV: dev
+
     steps:
-      - name: checkout repo
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Run a script
         run: |
           echo "hello man $DEV_ENV"
-          echo "i am yaml" 
-      
-  
-
-  
+          echo "i am yaml"
