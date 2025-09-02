@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths: 
-      - "**.py"
+      - "**.ipynb"
 
 jobs:
   build:   # singular "build" is more common, but "builds" also works
