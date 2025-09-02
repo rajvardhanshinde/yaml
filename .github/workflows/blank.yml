@@ -1,0 +1,20 @@
+name: demo
+on:
+  push: 
+    branches:
+      -main
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run a script
+        run: |
+          echo "hello man"
+          echo "i am yaml" 
+      
+  
+
+  
