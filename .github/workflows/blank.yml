@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DEV_ENV: dev
-      API: ${{secrets.API_KEY}}
-
+      
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -19,4 +18,4 @@ jobs:
       - name: Run a script
         run: |
           echo "hello man $DEV_ENV"
-          echo "i am yaml with api $API"
+          echo "i am yaml with api ${{secrets.API_KEY}}"
