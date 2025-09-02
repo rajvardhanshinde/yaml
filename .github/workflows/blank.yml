@@ -6,13 +6,15 @@ on:
 jobs:
   builds:
     runs-on: ubuntu-latest
+    env: 
+      DEV_ENV: dev
     steps:
       - name: checkout repo
         uses: actions/checkout@v4
 
       - name: Run a script
         run: |
-          echo "hello man"
+          echo "hello man $DEV_ENV"
           echo "i am yaml" 
       
   
